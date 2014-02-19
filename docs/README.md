@@ -1,3 +1,4 @@
 # Documentation #
 
-[Screenshots](screenshots.md)
+
+- [Screenshots](screenshots.md)
