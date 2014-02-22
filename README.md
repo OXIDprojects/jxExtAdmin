@@ -11,4 +11,4 @@
 Example:  
 ![screenshot](https://github.com/job963/jxExtAdmin/raw/master/docs/img/attribute.png)
  
-More screenshot are [here](docs/screenshots.md)
+More screenshot are [here](docs/screenshots.md) available.
