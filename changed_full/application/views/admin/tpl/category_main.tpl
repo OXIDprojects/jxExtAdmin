@@ -281,21 +281,21 @@ function LockAssignment(obj)
     <td valign="top" class="edittext" align="left" width="50%">
     [{ if $oxid != "-1"}]
 
-[{* --------- jxExtCats: Begin -----------*}]
+[{* --------- jxExtAdmin: Begin -----------*}]
 [{block name="admin_category_main_articles"}]
-[{* --------- jxExtArts: End -------------*}]
+[{* --------- jxExtAdmin: End -------------*}]
         <input [{ $readonly }] type="button" name="assignArticle" value="[{ oxmultilang ident="GENERAL_ASSIGNARTICLES" }]" class="edittext" onclick="JavaScript:showDialog('&cl=category_main&aoc=1&oxid=[{ $oxid }]');" [{if $edit->oxcategories__oxpriceto->value > 0 }] disabled [{/if}]>
-[{* --------- jxExtCats: Begin -----------*}]
+[{* --------- jxExtAdmin: Begin -----------*}]
 [{/block}]
-[{* --------- jxExtArts: End -------------*}]
+[{* --------- jxExtAdmin: End -------------*}]
 
-[{* --------- jxExtCats: Begin -----------*}]
+[{* --------- jxExtAdmin: Begin -----------*}]
 [{block name="admin_category_main_attributes"}]
-[{* --------- jxExtArts: End -------------*}]
+[{* --------- jxExtAdmin: End -------------*}]
         <!-- this is just a empty comment //-->
-[{* --------- jxExtCats: Begin -----------*}]
+[{* --------- jxExtAdmin: Begin -----------*}]
 [{/block}]
-[{* --------- jxExtArts: End -------------*}]
+[{* --------- jxExtAdmin: End -------------*}]
 
     [{ /if}]
 	

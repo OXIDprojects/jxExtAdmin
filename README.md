@@ -3,8 +3,10 @@
 *Module for backend / admin of OXID eShops for enhancing the existing admin pages*
 
 ## Installation and Setup
-1. Copy all files under **copy_this** to the root folder of your shop.
-2. In the shop admin goto settings/modules and activate **jxExtAdmin**.
+1. Copy all folders and files under **copy\_this** to the root folder of your shop.
+2. Then backup in the folder _application/views/admin/tpl_ the files _attribute\_list.tpl, _category\_list.tpl_ and _category\_main.tpl_.  
+Copy now the folders/files from **changed\_full** to the root folder of your shop. The existing files have to be overwritten. If you are using the original OXID eShop files, there should be no problems.
+3. In the shop admin goto **Settings** - **Modules**, select the module _jxExtAdmin_ and and activate it.
 
 ## Screenshot
 
