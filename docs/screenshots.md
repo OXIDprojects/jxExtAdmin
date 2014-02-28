@@ -48,3 +48,10 @@
 
 **12. CMS Pages**  
 ![](https://github.com/job963/jxExtAdmin/raw/master/docs/img/content.png)
+
+# Enhanced Category Details #
+### Display of products and attributes ###
+![Display of products and attributes](https://github.com/job963/jxExtAdmin/raw/master/docs/img/cat-extension-1.png)
+
+### Shipping Cost Rules and Discounts ###
+![Sipping Costs and Discounts](https://github.com/job963/jxExtAdmin/raw/master/docs/img/cat-extension-2.png)
