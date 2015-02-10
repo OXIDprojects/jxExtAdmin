@@ -15,16 +15,16 @@
 
 
 <form name="myedit" id="myedit" action="[{ $oViewConf->getSelfLink() }]" method="post">
-[{$oViewConf->getHiddenSid()}]
-<input type="hidden" name="cl" value="jxextadmin_category_assigned">
-<input type="hidden" name="fnc" value="">
-<input type="hidden" name="oxid" value="[{ $oxid }]">
-<input type="hidden" name="editval[article__oxid]" value="[{ $oxid }]">
-<input type="hidden" name="voxid" value="[{ $oxid }]">
-<input type="hidden" name="oxparentid" value="[{ $oxparentid }]">
-<input type="hidden" name="sorting" value="">
-<input type="hidden" name="stable" value="">
-<input type="hidden" name="starget" value="">
+    [{$oViewConf->getHiddenSid()}]
+    <input type="hidden" name="cl" value="jxextadmin_category_assigned">
+    <input type="hidden" name="fnc" value="">
+    <input type="hidden" name="oxid" value="[{ $oxid }]">
+    <input type="hidden" name="editval[article__oxid]" value="[{ $oxid }]">
+    <input type="hidden" name="voxid" value="[{ $oxid }]">
+    <input type="hidden" name="oxparentid" value="[{ $oxparentid }]">
+    <input type="hidden" name="sorting" value="">
+    <input type="hidden" name="stable" value="">
+    <input type="hidden" name="starget" value="">
 
   <table cellspacing="0" cellpadding="0" border="0" width="98%">
 
