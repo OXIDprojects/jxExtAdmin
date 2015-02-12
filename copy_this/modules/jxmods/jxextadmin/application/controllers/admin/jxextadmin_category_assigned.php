@@ -39,7 +39,7 @@ class jxextadmin_category_assigned extends oxAdminView
 
         $this->_aViewData["edit"] = $oArticle = oxNew( "oxarticle");
 
-        $soxId = oxConfig::getParameter( "oxid");
+        $soxId = $this->getConfig()->getRequestParameter( 'oxid');
         if ( $soxId != "-1" && isset( $soxId)) {
             $oDb = oxDb::getDb( oxDB::FETCH_MODE_ASSOC );
 

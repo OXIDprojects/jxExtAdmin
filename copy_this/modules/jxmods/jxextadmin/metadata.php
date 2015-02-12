@@ -12,8 +12,8 @@ $aModule = array(
     'id'           => 'jxextadmin',
     'title'        => 'jxExtAdmin - Extended Admin',
     'description'  => array(
-                        'de' => 'Erweiterung des Admin',
-                        'en' => 'Extension of Admin'
+                        'de' => 'Erweiterung des Admin (<a href="https://github.com/job963/jxExtAdmin/blob/master/README.md">siehe README</a>)',
+                        'en' => 'Extension of Admin (<a href="https://github.com/job963/jxExtAdmin/blob/master/README.md">see README</a>)'
                         ),
     'thumbnail'    => 'jxextadmin.png',
     'version'      => '0.3',
@@ -219,6 +219,22 @@ $aModule = array(
                         'template' => 'usergroup_list.tpl', 
                         'block'    => 'admin_usergroup_list_item',                     
                         'file'     => '/out/blocks/admin_usergroup_list_item.tpl'
+                        ),
+        
+                    array(
+                        'template' => 'list_user.tpl', 
+                        'block'    => 'admin_list_user_filter',                     
+                        'file'     => '/out/blocks/admin_list_user_filter.tpl'
+                        ),
+                    array(
+                        'template' => 'list_user.tpl', 
+                        'block'    => 'admin_list_user_sorting',                     
+                        'file'     => '/out/blocks/admin_list_user_sorting.tpl'
+                        ),
+                    array(
+                        'template' => 'list_user.tpl', 
+                        'block'    => 'admin_list_user_item',                     
+                        'file'     => '/out/blocks/admin_list_user_item.tpl'
                         ),
         
                     array(
