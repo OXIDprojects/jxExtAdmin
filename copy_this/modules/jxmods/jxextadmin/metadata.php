@@ -16,7 +16,7 @@ $aModule = array(
                         'en' => 'Extension of Admin (<a href="https://github.com/job963/jxExtAdmin/blob/master/README.md">see README</a>)'
                         ),
     'thumbnail'    => 'jxextadmin.png',
-    'version'      => '0.3',
+    'version'      => '0.3.1',
     'author'       => 'Joachim Barthel',
     'url'          => 'https://github.com/job963/jxExtAdmin',
     'email'        => 'jobarthel@gmail.com',
