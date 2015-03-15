@@ -5,15 +5,15 @@
   *  in file 
   *      article_extend.tpl 
   *
-  * @link      https://github.com/job963/jxExtArts
+  * @link      https://github.com/job963/jxExtAdmin
   * @license   http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
-  * @copyright (C) Joachim Barthel 2012-2013
+  * @copyright (C) Joachim Barthel 2012-2015
   *
   *  ------------------------------------------ *}]
     
-[{assign var="oConfig" value=$oViewConf->getConfig()}]
+[{ assign var="oConfig" value=$oViewConf->getConfig() }]
     
-[{ if $oConfig->getConfigParam("sJxExtCatsShowCategoryList") }]
+[{ if $oConfig->getConfigParam("sJxExtAdminShowCategoryList") }]
     [{ if $listitem->blacklist == 1}]
         [{assign var="listclass" value=listitem3 }]
     [{ else}]
@@ -24,7 +24,7 @@
     [{ /if}]
     <td valign="top" class="[{ $listclass}][{ if $listitem->oxcategories__oxactive->value == 1}] active[{/if}]"><div class="listitemfloating">&nbsp;</div></td>
     <td valign="top" class="[{ $listclass}]" height="15" align="center"><div class="listitemfloating"><a href="Javascript:top.oxid.admin.editThis('[{ $listitem->oxcategories__oxid->value}]');" class="[{ $listclass}]">[{ $listitem->oxcategories__oxsort->value }]</a></div></td>
-    <td valign="top" class="[{ $listclass}]" height="15">&nbsp;<a href="Javascript:document.getElementById('oxcategoryparentid').value='[{ $listitem->oxcategories__oxid->value }]';document.search.submit();"><nobr>&nbsp;[{ oxmultilang ident="JXEXTCATS_THISLINK" }]&nbsp;</nobr></a></td>
+    <td valign="top" class="[{ $listclass}]" height="15">&nbsp;<a href="Javascript:document.getElementById('oxcategoryparentid').value='[{ $listitem->oxcategories__oxid->value }]';document.search.submit();"><nobr>&nbsp;[{ oxmultilang ident="JXEXTADMIN_THISLINK" }]&nbsp;</nobr></a></td>
     <td valign="top" class="[{ $listclass}]" height="15"><div class="listitemfloating"><a href="Javascript:top.oxid.admin.editThis('[{ $listitem->oxcategories__oxid->value}]');" class="[{ $listclass}]">[{ $listitem->oxcategories__oxtitle->value }]</a></div></td>
     <td class="[{ $listclass}]">
     [{if !$readonly }]

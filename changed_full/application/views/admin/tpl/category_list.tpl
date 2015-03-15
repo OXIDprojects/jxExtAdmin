@@ -40,21 +40,12 @@ window.onload = function ()
                 <input class="listedit" type="text" size="5" maxlength="128" name="where[oxcategories][oxsort]" value="[{ $where.oxcategories.oxsort }]">
                 </div></div>
             </td>
-            [{* ---
-            <td valign="top" class="listfilter" height="20" align="center">
-                <div class="r1"><div class="b1">
-                    <div style="background-color:#323232; border-radius:3px;height:16px;width:48px;margin-top:2px">
-                    <a href="Javascript:document.getElementById('oxcategoryparentid').value='';document.search.submit();"><span style="color:#fff;">[{ oxmultilang ident="JXEXTADMIN_ALL" }]</span></a>
-                    </div>
-                </div></div>
-            </td>
-            --- *}]
             <td valign="top" class="listfilter" height="20" colspan="2">
                 <div class="r1"><div class="b1">
                 <div class="find">
                     <select name="changelang" class="editinput" onChange="Javascript:top.oxid.admin.changeLanguage();">
                     [{foreach from=$languages item=lang}]
-                    <option value="[{ $lang->id }]" [{if $lang->selected}]SELECTED[{/if}]>[{ $lang->name }]</option>
+                    <option value="[{ $lang->id }]" [{ if $lang->selected}]SELECTED[{/if}]>[{ $lang->name }]</option>
                     [{/foreach}]
                     </select>
                     <input class="listedit" type="submit" name="submitit" value="[{ oxmultilang ident="GENERAL_SEARCH" }]">
@@ -75,9 +66,6 @@ window.onload = function ()
         [{block name="admin_category_list_sorting"}]
             <td class="listheader first" height="15" align="center"><a href="Javascript:top.oxid.admin.setSorting( document.search, 'oxcategories', 'oxactive', 'asc');document.search.submit();" class="listheader">[{ oxmultilang ident="GENERAL_ACTIVTITLE" }]</a></td>
             <td class="listheader" height="15" align="center"><a href="Javascript:top.oxid.admin.setSorting( document.search, 'oxcategories', 'oxsort', 'asc');document.search.submit();" class="listheader">[{ oxmultilang ident="GENERAL_SORT" }]</a></td>
-            [{* ---
-            <td class="listheader" height="15">[{ oxmultilang ident="JXEXTADMIN_GOTO" }]</td>
-            --- *}]
             <td class="listheader" height="15" colspan="2"><a href="Javascript:top.oxid.admin.setSorting( document.search, 'oxcategories', 'oxtitle', 'asc');document.search.submit();" class="listheader">[{ oxmultilang ident="GENERAL_TITLE" }]</a></td>
         [{/block}]
     </tr>
@@ -99,9 +87,6 @@ window.onload = function ()
             [{ /if}]
             <td valign="top" class="[{ $listclass}][{ if $listitem->oxcategories__oxactive->value == 1}] active[{/if}]"><div class="listitemfloating">&nbsp;</div></td>
             <td valign="top" class="[{ $listclass}]" height="15" align="center"><div class="listitemfloating"><a href="Javascript:top.oxid.admin.editThis('[{ $listitem->oxcategories__oxid->value}]');" class="[{ $listclass}]">[{ $listitem->oxcategories__oxsort->value }]</a></div></td>
-            [{* ---
-            <td valign="top" class="[{ $listclass}]" height="15">&nbsp;<a href="Javascript:document.getElementById('oxcategoryparentid').value='[{ $listitem->oxcategories__oxid->value }]';document.search.submit();"><nobr>&nbsp;[{ oxmultilang ident="JXEXTADMIN_THISLINK" }]&nbsp;</nobr></a></td>
-            --- *}]
             <td valign="top" class="[{ $listclass}]" height="15"><div class="listitemfloating"><a href="Javascript:top.oxid.admin.editThis('[{ $listitem->oxcategories__oxid->value}]');" class="[{ $listclass}]">[{ $listitem->oxcategories__oxtitle->value }]</a></div></td>
             <td class="[{ $listclass}]">
             [{if !$readonly }]

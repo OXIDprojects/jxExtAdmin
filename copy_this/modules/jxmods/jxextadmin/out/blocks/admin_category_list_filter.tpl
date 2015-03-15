@@ -5,15 +5,15 @@
   *  in file 
   *      article_extend.tpl 
   *
-  * @link      https://github.com/job963/jxExtArts
+  * @link      https://github.com/job963/jxExtAdmin
   * @license   http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
-  * @copyright (C) Joachim Barthel 2012-2013
+  * @copyright (C) Joachim Barthel 2012-2015
   *
   *  ------------------------------------------ *}]
     
-[{assign var="oConfig" value=$oViewConf->getConfig()}]
+[{ assign var="oConfig" value=$oViewConf->getConfig() }]
     
-[{ if $oConfig->getConfigParam("sJxExtCatsShowCategoryList") }]
+[{ if $oConfig->getConfigParam("sJxExtAdminShowCategoryList") }]
     <td valign="top" class="listfilter first" height="20">
         <div class="r1"><div class="b1">&nbsp;</div></div>
     </td>
@@ -26,11 +26,11 @@
         <div class="r1"><div class="b1">
             [{ assign var=jxparentid value="" }]
             <div style="float:left; background-color:#323232; border-radius:3px;height:16px;width:32px;margin-top:0px">
-            <a href="Javascript:document.getElementById('oxcategoryparentid').value='';document.search.submit();"><span style="color:#fff;">[{ oxmultilang ident="JXEXTCATS_ALL" }]</span></a>
+            <a href="Javascript:document.getElementById('oxcategoryparentid').value='';document.search.submit();"><span style="color:#fff;">[{ oxmultilang ident="JXEXTADMIN_ALL" }]</span></a>
             <script type="text/javascript">var jxparentid = "";</script>
             </div>
-            <a href="Javascript:document.getElementById('oxcategoryparentid').value='oxrootid';document.search.submit();"><img src="[{$oViewConf->getModuleUrl("jxextcats","out/admin/img/uparrow.png")}]" /></a>
-            <a href="Javascript:document.getElementById('oxcategoryparentid').value=jxparentid;document.search.submit();"><img src="[{$oViewConf->getModuleUrl("jxextcats","out/admin/img/backarrow.png")}]" /></a>
+            <a href="Javascript:document.getElementById('oxcategoryparentid').value='oxrootid';document.search.submit();"><img src="[{$oViewConf->getModuleUrl("jxextadmin","out/admin/img/uparrow.png")}]" /></a>
+            <a href="Javascript:document.getElementById('oxcategoryparentid').value=jxparentid;document.search.submit();"><img src="[{$oViewConf->getModuleUrl("jxextadmin","out/admin/img/backarrow.png")}]" /></a>
         </div></div>
     </td>
     <td valign="top" class="listfilter" height="20" colspan="2">

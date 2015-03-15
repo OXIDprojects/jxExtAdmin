@@ -12,11 +12,11 @@ $aModule = array(
     'id'           => 'jxextadmin',
     'title'        => 'jxExtAdmin - Extended Admin',
     'description'  => array(
-                        'de' => 'Erweiterung des Admin',
-                        'en' => 'Extension of Admin'
+                        'de' => 'Erweiterung des Admin (<a href="https://github.com/job963/jxExtAdmin/blob/master/README.md">siehe README</a>)',
+                        'en' => 'Extension of Admin (<a href="https://github.com/job963/jxExtAdmin/blob/master/README.md">see README</a>)'
                         ),
     'thumbnail'    => 'jxextadmin.png',
-    'version'      => '0.2',
+    'version'      => '0.3.1',
     'author'       => 'Joachim Barthel',
     'url'          => 'https://github.com/job963/jxExtAdmin',
     'email'        => 'jobarthel@gmail.com',
@@ -29,7 +29,7 @@ $aModule = array(
                         'jxextadmin_category_assigned' => 'jxmods/jxextadmin/application/controllers/admin/jxextadmin_category_assigned.php',
                         ),
     'templates'    => array(
-                        'jxextadmin_category_assigned.tpl' => 'jxmods/jxextadmin/views/admin/tpl/jxextadmin_category_assigned.tpl',
+                        'jxextadmin_category_assigned.tpl' => 'jxmods/jxextadmin/application/views/admin/tpl/jxextadmin_category_assigned.tpl',
                         ),
     'blocks' => array(
                     array(
@@ -222,6 +222,22 @@ $aModule = array(
                         ),
         
                     array(
+                        'template' => 'list_user.tpl', 
+                        'block'    => 'admin_list_user_filter',                     
+                        'file'     => '/out/blocks/admin_list_user_filter.tpl'
+                        ),
+                    array(
+                        'template' => 'list_user.tpl', 
+                        'block'    => 'admin_list_user_sorting',                     
+                        'file'     => '/out/blocks/admin_list_user_sorting.tpl'
+                        ),
+                    array(
+                        'template' => 'list_user.tpl', 
+                        'block'    => 'admin_list_user_item',                     
+                        'file'     => '/out/blocks/admin_list_user_item.tpl'
+                        ),
+        
+                    array(
                         'template' => 'news_list.tpl', 
                         'block'    => 'admin_news_list_colgroup',                     
                         'file'     => '/out/blocks/admin_news_list_colgroup.tpl'
@@ -284,6 +300,75 @@ $aModule = array(
                         'file'     => '/out/blocks/admin_content_list_item.tpl'
                         ),
 
+
+        
+                    array(
+                        'template' => 'article_main.tpl', 
+                        'block'    => 'admin_article_main_form',                     
+                        'file'     => '/out/blocks/admin_article_main_form.tpl'
+                            ),
+                    array(
+                        'template' => 'article_main.tpl', 
+                        'block'    => 'admin_article_main_editor',                     
+                        'file'     => '/out/blocks/admin_article_main_editor.tpl'
+                            ),
+                    array(
+                        'template' => 'article_extend.tpl', 
+                        'block'    => 'admin_article_extend_categories',                     
+                        'file'     => '/out/blocks/admin_article_extend_categories.tpl'
+                            ),
+                    array(
+                        'template' => 'article_crossselling.tpl', 
+                        'block'    => 'admin_article_crossselling_crossselling',                     
+                        'file'     => '/out/blocks/admin_article_crossselling_crossselling.tpl'
+                            ),
+                    array(
+                        'template' => 'article_crossselling.tpl', 
+                        'block'    => 'admin_article_crossselling_accessoires',                     
+                        'file'     => '/out/blocks/admin_article_crossselling_accessoires.tpl'
+                            ),
+                    array(
+                        'template' => 'article_stock.tpl', 
+                        'block'    => 'admin_article_stock_form',                     
+                        'file'     => '/out/blocks/admin_article_stock_form.tpl'
+                            ),
+                    array(
+                        'template' => 'article_variant.tpl', 
+                        'block'    => 'admin_article_variant_listheader',                     
+                        'file'     => '/out/blocks/admin_article_variant_listheader.tpl'
+                            ),
+                    array(
+                        'template' => 'article_variant.tpl', 
+                        'block'    => 'admin_article_variant_parent',                     
+                        'file'     => '/out/blocks/admin_article_variant_parent.tpl'
+                            ),
+                    array(
+                        'template' => 'article_variant.tpl', 
+                        'block'    => 'admin_article_variant_listitem',                     
+                        'file'     => '/out/blocks/admin_article_variant_listitem.tpl'
+                            ),
+                    array(
+                        'template' => 'article_variant.tpl', 
+                        'block'    => 'admin_article_variant_newitem',                     
+                        'file'     => '/out/blocks/admin_article_variant_newitem.tpl'
+                            ),
+                    array(
+                        'template' => 'article_pictures.tpl', 
+                        'block'    => 'admin_article_pictures_main',                     
+                        'file'     => '/out/blocks/admin_article_pictures_main.tpl'
+                            ),
+                    array(
+                        'template' => 'article_pictures.tpl', 
+                        'block'    => 'admin_article_pictures_custom',                     
+                        'file'     => '/out/blocks/admin_article_pictures_custom.tpl'
+                            ),
+                    array(
+                        'template' => 'headitem.tpl', 
+                        'block'    => 'admin_headitem_js',                     
+                        'file'     => '/out/blocks/jxextadmin_admin_headitem_js.tpl'
+                            ),
+        
+        
         
                     array(
                         'template' => 'category_list.tpl', 
@@ -323,13 +408,63 @@ $aModule = array(
                         ),
     'settings' => array(
                     array(
-                            'group' => 'JXEXTADMIN_BLOCKS', 
+                            'group' => 'JXEXTADMIN_ART_BLOCKS', 
+                            'name'  => 'sJxExtAdminShowArticleMain', 
+                            'type'  => 'bool', 
+                            'value' => 'true'
+                            ),
+                    array(
+                            'group' => 'JXEXTADMIN_ART_BLOCKS', 
+                            'name'  => 'sJxExtAdminShowArticleCategories', 
+                            'type'  => 'bool', 
+                            'value' => 'true'
+                            ),
+                    array(
+                            'group' => 'JXEXTADMIN_ART_BLOCKS', 
+                            'name'  => 'sJxExtAdminShowArticleCrosssell', 
+                            'type'  => 'bool', 
+                            'value' => 'true'
+                            ),
+                    array(
+                            'group' => 'JXEXTADMIN_ART_BLOCKS', 
+                            'name'  => 'sJxExtAdminShowArticleStock', 
+                            'type'  => 'bool', 
+                            'value' => 'true'
+                            ),
+                    array(
+                            'group' => 'JXEXTADMIN_ART_BLOCKS', 
+                            'name'  => 'sJxExtAdminShowArticleVariant', 
+                            'type'  => 'bool', 
+                            'value' => 'true'
+                            ),
+                    array(
+                            'group' => 'JXEXTADMIN_ART_BLOCKS', 
+                            'name'  => 'sJxExtAdminShowArticlePictures', 
+                            'type'  => 'bool', 
+                            'value' => 'true'
+                            ),
+                    array(
+                            'group' => 'JXEXTADMIN_ART_FUNCTIONS', 
+                            'name'  => 'sJxExtAdminCheckEAN', 
+                            'type'  => 'bool', 
+                            'value' => 'true'
+                            ),
+                    array(
+                            'group' => 'JXEXTADMIN_ART_FUNCTIONS', 
+                            'name'  => 'sJxExtAdminCheckDate', 
+                            'type'  => 'bool', 
+                            'value' => 'true'
+                            ),
+    
+    
+                    array(
+                            'group' => 'JXEXTADMIN_CAT_BLOCKS', 
                             'name'  => 'sJxExtAdminShowCategoryList', 
                             'type'  => 'bool', 
                             'value' => 'true'
                             ),
                     array(
-                            'group' => 'JXEXTADMIN_BLOCKS', 
+                            'group' => 'JXEXTADMIN_CAT_BLOCKS', 
                             'name'  => 'sJxExtAdminShowCategoryMain', 
                             'type'  => 'bool', 
                             'value' => 'true'

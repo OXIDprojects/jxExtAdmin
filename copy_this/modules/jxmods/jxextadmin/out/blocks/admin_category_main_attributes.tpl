@@ -5,15 +5,15 @@
   *  in file 
   *      article_extend.tpl 
   *
-  * @link      https://github.com/job963/jxExtArts
+  * @link      https://github.com/job963/jxExtAdmin
   * @license   http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
-  * @copyright (C) Joachim Barthel 2012-2013
+  * @copyright (C) Joachim Barthel 2012-2015
   *
   *  ------------------------------------------ *}]
     
-[{assign var="oConfig" value=$oViewConf->getConfig()}]
+[{ assign var="oConfig" value=$oViewConf->getConfig() }]
     
-[{ if $oConfig->getConfigParam("sJxExtCatsShowCategoryMain") }]
+[{ if $oConfig->getConfigParam("sJxExtAdminShowCategoryMain") }]
     <br />
     <fieldset title="[{ oxmultilang ident="ATTRIBUTE_CATEGORY_ATRLIST" }]" style="padding-left: 5px;">
         <legend>[{ oxmultilang ident="ATTRIBUTE_CATEGORY_ATRLIST" }]</legend>

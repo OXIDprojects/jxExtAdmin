@@ -1,9 +1,25 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/*
+ *    This file is part of the module jxExtAdmin for OXID eShop Community Edition.
+ *
+ *    The module jxExtAdmin for OXID eShop Community Edition is free software: you can redistribute it and/or modify
+ *    it under the terms of the GNU General Public License as published by
+ *    the Free Software Foundation, either version 3 of the License, or
+ *    (at your option) any later version.
+ *
+ *    The module jxExtAdmin for OXID eShop Community Edition is distributed in the hope that it will be useful,
+ *    but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *    GNU General Public License for more details.
+ *
+ *    You should have received a copy of the GNU General Public License
+ *    along with OXID eShop Community Edition.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @link      https://github.com/job963/jxExtAdmin
+ * @license   http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
+ * @copyright (C) Joachim Barthel 2013-2015
+ *
  */
 
 class jxextadmin_category_assigned extends oxAdminView
@@ -12,7 +28,6 @@ class jxextadmin_category_assigned extends oxAdminView
 
     /**
      *
-     * 
      * @return string
      */
     public function render()
@@ -20,15 +35,11 @@ class jxextadmin_category_assigned extends oxAdminView
         $myConfig = $this->getConfig();
 
         parent::render();
-        $oSmarty = oxUtilsView::getInstance()->getSmarty();
-        $oSmarty->assign( "oViewConf", $this->_aViewData["oViewConf"]);
-        $oSmarty->assign( "shop", $this->_aViewData["shop"]);
-        //$iLang = $this->getLanguage();
         $iLang = $this->_iEditLang;
 
         $this->_aViewData["edit"] = $oArticle = oxNew( "oxarticle");
 
-        $soxId = oxConfig::getParameter( "oxid");
+        $soxId = $this->getConfig()->getRequestParameter( 'oxid');
         if ( $soxId != "-1" && isset( $soxId)) {
             $oDb = oxDb::getDb( oxDB::FETCH_MODE_ASSOC );
 
@@ -51,12 +62,14 @@ class jxextadmin_category_assigned extends oxAdminView
             $sDisTable = getViewName( 'oxdiscount', $iLang );
             $sO2DTable = getViewName( 'oxobject2discount', $iLang );
 
-            $sSql = "SELECT d.oxtitle, oxactivefrom, oxactiveto, oxamount, oxamountto, oxprice, oxpriceto,oxaddsum, oxaddsumtype 
-FROM {$sDisTable} d, {$sO2DTable} o2d 
-WHERE 
-d.oxid = o2d.oxdiscountid
-AND o2d.oxobjectid= '{$soxId}'";
-//echo $sSql;
+            $sSql = "SELECT "
+                        . "d.oxtitle, oxactivefrom, oxactiveto, oxamount, oxamountto, oxprice, oxpriceto, oxaddsum, oxaddsumtype "
+                    . "FROM "
+                        . "{$sDisTable} d, {$sO2DTable} o2d "
+                    . "WHERE "
+                        . "d.oxid = o2d.oxdiscountid "
+                        . "AND o2d.oxobjectid= '{$soxId}'";
+            //echo $sSql;
             $rs = $oDb->Execute($sSql);
             $aDiscDefs = array();
             while (!$rs->EOF) {
@@ -64,8 +77,8 @@ AND o2d.oxobjectid= '{$soxId}'";
                 $rs->MoveNext();
             }
 
-            $oSmarty->assign("aDelDefs", $aDelDefs);
-            $oSmarty->assign("aDiscDefs", $aDiscDefs);
+            $this->_aViewData["aDelDefs"] = $aDelDefs;
+            $this->_aViewData["aDiscDefs"] = $aDiscDefs;
         }
 
         return $this->_sThisTemplate;
