@@ -12,11 +12,11 @@ $aModule = array(
     'id'           => 'jxextadmin',
     'title'        => 'jxExtAdmin - Extended Admin',
     'description'  => array(
-                        'de' => 'Erweiterung des Admin (<a href="https://github.com/job963/jxExtAdmin/blob/master/README.md">siehe README</a>)',
-                        'en' => 'Extension of Admin (<a href="https://github.com/job963/jxExtAdmin/blob/master/README.md">see README</a>)'
+                        'de' => 'Erweiterung des Admin (<a href="https://github.com/job963/jxExtAdmin/blob/master/README.md" target="_blank"><u>siehe README</u></a>)',
+                        'en' => 'Extension of Admin (<a href="https://github.com/job963/jxExtAdmin/blob/master/README.md" target="_blank"><u>see README</u></a>)'
                         ),
     'thumbnail'    => 'jxextadmin.png',
-    'version'      => '0.3.1',
+    'version'      => '0.3.3',
     'author'       => 'Joachim Barthel',
     'url'          => 'https://github.com/job963/jxExtAdmin',
     'email'        => 'jobarthel@gmail.com',
