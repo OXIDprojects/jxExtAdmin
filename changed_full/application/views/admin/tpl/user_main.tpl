@@ -241,7 +241,13 @@ function chkInsert()
     <!-- Anfang rechte Seite -->
     <td valign="top" class="edittext vr" align="left" width="50%">
     [{ if $oxid != "-1"}]
+[{* --------- jxExtAdmin: Begin ----------- *}]
+[{block name="admin_user_main_usergroups"}]
+[{* --------- jxExtAdmin: End ------------- *}]
        <input [{ $readonly }] type="button" value="[{ oxmultilang ident="GENERAL_ASSIGNGROUPS" }]" class="edittext" onclick="JavaScript:showDialog('&cl=user_main&aoc=1&oxid=[{ $oxid }]');">
+[{* --------- jxExtAdmin: Begin ----------- *}]
+[{/block}]
+[{* --------- jxExtAdmin: End ------------- *}]
     [{ /if}]
     </td>
     </tr>
