@@ -16,7 +16,7 @@ $aModule = array(
                         'en' => 'Extension of Admin (<a href="https://github.com/job963/jxExtAdmin/blob/master/README.md" target="_blank"><u>see README</u></a>)'
                         ),
     'thumbnail'    => 'jxextadmin.png',
-    'version'      => '0.4.0',
+    'version'      => '0.4.1',
     'author'       => 'Joachim Barthel',
     'url'          => 'https://github.com/job963/jxExtAdmin',
     'email'        => 'jobarthel@gmail.com',
@@ -497,6 +497,15 @@ $aModule = array(
                             'name'  => 'sJxExtAdminShowCategoryMain', 
                             'type'  => 'bool', 
                             'value' => 'true'
+                            ),
+    
+    
+                    array(
+                            'group' => 'JXEXTADMIN_HIGH_TEXTS', 
+                            'name'  => 'sJxExtAdminHighUserGroups', 
+                            'type'  => 'arr', 
+                            'value' => array(), 
+                            'position' => 1
                             ),
     
                         )

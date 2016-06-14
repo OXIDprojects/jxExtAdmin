@@ -23,14 +23,17 @@ $aLang = array(
     'SHOP_MODULE_sJxExtAdminCheckEAN'                       => 'Check EAN/GTIN code',
     'SHOP_MODULE_sJxExtAdminCheckDate'                      => 'Check date',
         
-    'JXEXTADMIN_ALL'                                         => 'All',
-    'JXEXTADMIN_GOTO'                                        => 'Goto',
-    'JXEXTADMIN_THISLINK'                                    => 'this ->',
-    'tbclcategory_jxextadmin'                                => 'Shipping costs & Discounts',
+    'JXEXTADMIN_ALL'                                        => 'All',
+    'JXEXTADMIN_GOTO'                                       => 'Goto',
+    'JXEXTADMIN_THISLINK'                                   => 'this ->',
+    'tbclcategory_jxextadmin'                               => 'Shipping costs & Discounts',
     
-    'SHOP_MODULE_GROUP_JXEXTADMIN_BLOCKS'                    => 'Enhance the following sections',
-    'SHOP_MODULE_sJxExtAdminShowCategoryList'                => 'Category Table',
-    'SHOP_MODULE_sJxExtAdminShowCategoryMain'                => 'Category Main',
+    'SHOP_MODULE_GROUP_JXEXTADMIN_BLOCKS'                   => 'Enhance the following sections',
+    'SHOP_MODULE_sJxExtAdminShowCategoryList'               => 'Category Table',
+    'SHOP_MODULE_sJxExtAdminShowCategoryMain'               => 'Category Main',
+    
+    'SHOP_MODULE_GROUP_JXEXTADMIN_HIGH_TEXTS'               => 'Highlight the following texts',
+    'SHOP_MODULE_sJxExtAdminHighUserGroups'                 => 'User groups',
         
     'charset'                                            => 'ISO-8859-15',
 );
