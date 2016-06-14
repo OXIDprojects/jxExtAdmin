@@ -10,13 +10,13 @@ $sMetadataVersion = '1.1';
  */
 $aModule = array(
     'id'           => 'jxextadmin',
-    'title'        => 'jxExtAdmin - Extended Admin',
+    'title'        => 'jxExtAdmin - Extends OXID Admin',
     'description'  => array(
                         'de' => 'Erweiterung des Admin (<a href="https://github.com/job963/jxExtAdmin/blob/master/README.md" target="_blank"><u>siehe README</u></a>)',
                         'en' => 'Extension of Admin (<a href="https://github.com/job963/jxExtAdmin/blob/master/README.md" target="_blank"><u>see README</u></a>)'
                         ),
     'thumbnail'    => 'jxextadmin.png',
-    'version'      => '0.3.3',
+    'version'      => '0.4.0',
     'author'       => 'Joachim Barthel',
     'url'          => 'https://github.com/job963/jxExtAdmin',
     'email'        => 'jobarthel@gmail.com',
@@ -52,6 +52,7 @@ $aModule = array(
                         'block'    => 'admin_vendor_list_item',                     
                         'file'     => '/out/blocks/admin_vendor_list_item.tpl'
                         ),
+
         
                     array(
                         'template' => 'manufacturer_list.tpl', 
@@ -73,6 +74,7 @@ $aModule = array(
                         'block'    => 'admin_manufacturer_list_item',                     
                         'file'     => '/out/blocks/admin_manufacturer_list_item.tpl'
                         ),
+
         
                     array(
                         'template' => 'payment_list.tpl', 
@@ -115,6 +117,7 @@ $aModule = array(
                         'block'    => 'admin_discount_list_item',                     
                         'file'     => '/out/blocks/admin_discount_list_item.tpl'
                         ),
+
         
                     array(
                         'template' => 'deliveryset_list.tpl', 
@@ -136,6 +139,7 @@ $aModule = array(
                         'block'    => 'admin_deliveryset_list_item',                     
                         'file'     => '/out/blocks/admin_deliveryset_list_item.tpl'
                         ),
+
         
                     array(
                         'template' => 'delivery_list.tpl', 
@@ -157,6 +161,7 @@ $aModule = array(
                         'block'    => 'admin_delivery_list_item',                     
                         'file'     => '/out/blocks/admin_delivery_list_item.tpl'
                         ),
+
         
                     array(
                         'template' => 'wrapping_list.tpl', 
@@ -178,6 +183,7 @@ $aModule = array(
                         'block'    => 'admin_wrapping_list_item',                     
                         'file'     => '/out/blocks/admin_wrapping_list_item.tpl'
                         ),
+
         
                     array(
                         'template' => 'attribute_list.tpl', 
@@ -199,6 +205,19 @@ $aModule = array(
                         'block'    => 'admin_attribute_list_item',                     
                         'file'     => '/out/blocks/admin_attribute_list_item.tpl'
                         ),
+
+        
+                    array(
+                        'template' => 'user_main.tpl', 
+                        'block'    => 'admin_user_main_form',                     
+                        'file'     => '/out/blocks/admin_user_main_form.tpl'
+                        ),
+                    array(
+                        'template' => 'user_main.tpl', 
+                        'block'    => 'admin_user_main_usergroups',                     
+                        'file'     => '/out/blocks/admin_user_main_usergroups.tpl'
+                        ),
+
         
                     array(
                         'template' => 'usergroup_list.tpl', 
@@ -220,6 +239,7 @@ $aModule = array(
                         'block'    => 'admin_usergroup_list_item',                     
                         'file'     => '/out/blocks/admin_usergroup_list_item.tpl'
                         ),
+
         
                     array(
                         'template' => 'list_user.tpl', 
@@ -236,6 +256,7 @@ $aModule = array(
                         'block'    => 'admin_list_user_item',                     
                         'file'     => '/out/blocks/admin_list_user_item.tpl'
                         ),
+
         
                     array(
                         'template' => 'news_list.tpl', 
@@ -257,6 +278,7 @@ $aModule = array(
                         'block'    => 'admin_news_list_item',                     
                         'file'     => '/out/blocks/admin_news_list_item.tpl'
                         ),
+
         
                     array(
                         'template' => 'adminlinks_list.tpl', 
@@ -278,6 +300,7 @@ $aModule = array(
                         'block'    => 'admin_adminlinks_list_item',                     
                         'file'     => '/out/blocks/admin_adminlinks_list_item.tpl'
                         ),
+
         
                     array(
                         'template' => 'content_list.tpl', 
@@ -299,7 +322,6 @@ $aModule = array(
                         'block'    => 'admin_content_list_item',                     
                         'file'     => '/out/blocks/admin_content_list_item.tpl'
                         ),
-
 
         
                     array(
@@ -367,8 +389,7 @@ $aModule = array(
                         'block'    => 'admin_headitem_js',                     
                         'file'     => '/out/blocks/jxextadmin_admin_headitem_js.tpl'
                             ),
-        
-        
+                
         
                     array(
                         'template' => 'category_list.tpl', 
@@ -444,6 +465,14 @@ $aModule = array(
                             'value' => 'true'
                             ),
                     array(
+                            'group' => 'JXEXTADMIN_ART_BLOCKS', 
+                            'name'  => 'sJxExtAdminShowUserGroups', 
+                            'type'  => 'bool', 
+                            'value' => 'true'
+                            ),
+        
+        
+                    array(
                             'group' => 'JXEXTADMIN_ART_FUNCTIONS', 
                             'name'  => 'sJxExtAdminCheckEAN', 
                             'type'  => 'bool', 
@@ -469,6 +498,7 @@ $aModule = array(
                             'type'  => 'bool', 
                             'value' => 'true'
                             ),
+    
                         )
     );
 

@@ -11,13 +11,14 @@ $aLang = array(
     'JXEXTADMIN_ERROR_WRONGCHARS'                            => 'EAN/GTIN Code enthält falsche Zeichen',
     'JXEXTADMIN_ERROR_WRONGCHECKSUM'                         => 'Fehlerhafter GTIN Code (Prüfsumme)',
     
-    'SHOP_MODULE_GROUP_JXEXTADMIN_ART_BLOCKS'                => 'Folgende Tab-Reiter ersetzen',
+    'SHOP_MODULE_GROUP_JXEXTADMIN_ART_BLOCKS'                => 'Folgende Tab-Reiter erweitern',
     'SHOP_MODULE_sJxExtAdminShowArticleMain'                 => 'Artikel-Stamm',
     'SHOP_MODULE_sJxExtAdminShowArticleCategories'           => 'Kategorie-Zuordnungen',
     'SHOP_MODULE_sJxExtAdminShowArticleCrosssell'            => 'Zubehör und Cross-Selling',
     'SHOP_MODULE_sJxExtAdminShowArticleStock'                => 'Lager',
     'SHOP_MODULE_sJxExtAdminShowArticleVariant'              => 'Varianten',
     'SHOP_MODULE_sJxExtAdminShowArticlePictures'             => 'Bilder',
+    'SHOP_MODULE_sJxExtAdminShowUserGroups'                  => 'Benutzergruppen',
     'SHOP_MODULE_GROUP_JXEXTADMIN_ART_FUNCTIONS'             => 'Folgende Funktionen aktivieren',
     'SHOP_MODULE_sJxExtAdminCheckEAN'                        => 'EAN/GTIN Code prüfen',
     'SHOP_MODULE_sJxExtAdminCheckDate'                       => 'Datum prüfen',
@@ -33,5 +34,4 @@ $aLang = array(
     
     'charset'                                              => 'ISO-8859-15',
 );
-
 ?>

@@ -6,7 +6,7 @@
 [{ if $listitem->getId() == $oxid }]
     [{assign var="listclass" value=listitem4 }]
 [{ /if*}]
-<td valign="top" class="[{ $listclass}][{ if $oUser->oxuser__oxactive->value == 1}] active[{/if}]">
+<td valign="top" class="[{ $listclass}][{if $oUser->oxuser__oxactive->value == 1}] active[{/if}]">
     <div class="listitemfloating">
         &nbsp;
     </div>
